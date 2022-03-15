@@ -23,7 +23,17 @@ public abstract class RequestHandler
 
 	public abstract List<OsmNodeNamed> readWayPointList();
 
-	public abstract String formatTrack(OsmTrack track);
+	public abstract double getBikerPower();
+
+  public abstract double getMaxSpeed();
+
+  public abstract double getTotalMass();
+
+  public abstract double getRollingResistance();
+
+  public abstract double getDragCoefficient();
+
+  public abstract String formatTrack(OsmTrack track);
 
   public abstract String getMimeType();
 

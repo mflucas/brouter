@@ -115,7 +115,7 @@ public class ServerHandler extends RequestHandler {
   }
 
   //read biker power in Watts (W)
-  public double bikerPower() {
+  public double getBikerPower() {
     String biker_Power = params.get("bikerPower");
 
     Double thisbikerPower = Double.parseDouble(biker_Power);
@@ -123,7 +123,7 @@ public class ServerHandler extends RequestHandler {
   }
 
   //Read total mass in kg
-  public double totalMass() {
+  public double getTotalMass() {
     String total_Mass = params.get("totalMass");
 
     Double thisTotalMass = Double.parseDouble(total_Mass);
@@ -131,7 +131,7 @@ public class ServerHandler extends RequestHandler {
   }
 
   //Read max Speed in km/h and return it in m/s
-  public double maxSpeed() {
+  public double getMaxSpeed() {
     String max_Speed = params.get("maxSpeed");
 
     Double thisMaxSpeed = Double.parseDouble(max_Speed)/3.6;
@@ -139,7 +139,7 @@ public class ServerHandler extends RequestHandler {
   }
 
   //Read drag coefficient in m2
-  public double S_C_x() {
+  public double getDragCoefficient() {
     String drag_Coefficient = params.get("dragCoefficient");
 
     Double thisDragCoefficient = Double.parseDouble(drag_Coefficient);
@@ -147,7 +147,7 @@ public class ServerHandler extends RequestHandler {
   }
 
   //Read rolling resistance (dimensionless)
-  public double C_r() {
+  public double getRollingResistance() {
     String rolling_Resistance = params.get("rollingResistance");
 
     Double thisRollingResistance = Double.parseDouble(rolling_Resistance);

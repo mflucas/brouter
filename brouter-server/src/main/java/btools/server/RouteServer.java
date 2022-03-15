@@ -237,6 +237,18 @@ public class RouteServer extends Thread implements Comparable<RouteServer>
             }
             RoutingContext rc = handler.readRoutingContext();
             List<OsmNodeNamed> wplist = handler.readWayPointList();
+            double dragCoefficient = handler.getDragCoefficient();
+            double rollingResistance = handler.getRollingResistance();
+            double bikerPower = handler.getBikerPower();
+            double totalMass = handler.getTotalMass();
+            double maxSpeed = handler.getMaxSpeed();
+
+            rc.bikerPower = bikerPower;
+            rc.S_C_x=dragCoefficient;
+            rc.defaultC_r=rollingResistance;
+            rc.totalMass=totalMass;
+            rc.maxSpeed=maxSpeed;
+
 
             if ( wplist.size() < 10 )
             {

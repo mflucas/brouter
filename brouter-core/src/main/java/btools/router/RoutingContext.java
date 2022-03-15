@@ -249,6 +249,8 @@ public final class RoutingContext
   public double defaultC_r;
   public double bikerPower;
 
+
+
   public static void prepareNogoPoints( List<OsmNodeNamed> nogos )
   {
     for( OsmNodeNamed nogo : nogos )
