@@ -114,6 +114,47 @@ public class ServerHandler extends RequestHandler {
     return wplist;
   }
 
+  //read biker power in Watts (W)
+  public double bikerPower() {
+    String biker_Power = params.get("bikerPower");
+
+    Double thisbikerPower = Double.parseDouble(biker_Power);
+    return(thisbikerPower);
+  }
+
+  //Read total mass in kg
+  public double totalMass() {
+    String total_Mass = params.get("totalMass");
+
+    Double thisTotalMass = Double.parseDouble(total_Mass);
+    return(thisTotalMass);
+  }
+
+  //Read max Speed in km/h and return it in m/s
+  public double maxSpeed() {
+    String max_Speed = params.get("maxSpeed");
+
+    Double thisMaxSpeed = Double.parseDouble(max_Speed)/3.6;
+    return(thisMaxSpeed);
+  }
+
+  //Read drag coefficient in m2
+  public double S_C_x() {
+    String drag_Coefficient = params.get("dragCoefficient");
+
+    Double thisDragCoefficient = Double.parseDouble(drag_Coefficient);
+    return(thisDragCoefficient);
+  }
+
+  //Read rolling resistance (dimensionless)
+  public double C_r() {
+    String rolling_Resistance = params.get("rollingResistance");
+
+    Double thisRollingResistance = Double.parseDouble(rolling_Resistance);
+    return(thisRollingResistance);
+  }
+
+
   @Override
   public String formatTrack(OsmTrack track)
   {
